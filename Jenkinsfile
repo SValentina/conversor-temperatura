@@ -1,8 +1,7 @@
 pipeline {
+  agent any  
   
-  agent none  
   stages {
-
     stage('SonarQube Analysis') {
       environment {
         sonarHome = tool 'sonar-scanner'
@@ -21,6 +20,5 @@ pipeline {
         echo '--- QualityGate Passed ---'
       }
     }
-
   }
 }
