@@ -14,11 +14,5 @@ pipeline {
       }
     }
 
-    stage('Quality Gate') {
-      steps {
-        waitForQualityGate true
-        echo '--- QualityGate Passed ---'
-      }
-    }
   }
 }
